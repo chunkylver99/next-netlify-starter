@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset = "UTF-8" />
-	<meta name = "viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>Ducks are Swaggy</title>
-	<link rel = "stylesheet" href = "styles.css"/>
 </head>
+	<script>
+	function RandomDuck() {
+    //declare new array
+	var random1 = new Array();
+	random1 = [
+        "https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures-1.jpg", 
+        "https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures-2.jpg",
+        "https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures.jpg",
+        "https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures-3.jpg",
+        "https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures-5.jpg",
+        "https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures-9.jpg"
+    ];
+    var duck = Math.floor(Math.random()*random1.length);
+    return document.getElementById("result").innerHTML = '<img src="'+random1[duck]+'"/>';
 
-<h1>Ducks are Cool!</h1>
-	<p>Random Duck Generator</p>
-	<button type="generate">Generate</button>
-<main>
+}
+	</script>
 	<body>
-	<nav class= "navbar">
-		<div class="navbar__container">
-			<a href = "/" id="navbar__logo">NEXT</a>
-			<div class="navbar__toggle" id="mobile-menu">
-				<span class="bar"></span> <span class= "bar"></span>
-				<span class = "bar"></span>
-			</div>
-		<ul class= "navbar__menu">
-			<li class="navbar__item">
-				<a href = "/" class = "navbar__links"> DUCKS </a>
-			</li>
-			<li class="navbar__item">
-				<a href="/About.html" class="navbar__links">About Us </a>
-			</li>
-		</div>
-	</nav>
+		<header>
+		<h1 style = "text-align:center;">Ducks are <em>Cool!</em></h1>
+		<h2 style = "text-align:center;">Random Duck Generator<h2>
+		</header>
+	<main style = "text-align:center;">
+		<p>Created this page because my girlfriend threw the idea out there and I thought it sounded sick as fudge.<br>
+I figured it would be great practice to work with HTML and Javscript at the same time :)). Enjoy.</p>	
+		<button onClick = "RandomDuck()">Generate</button>
+		<br> <br>
+		<span id="result" align="center"> </span>
+	</main>
 	</body>
-
-</main>
-
 </html>
