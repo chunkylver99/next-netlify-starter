@@ -14,15 +14,27 @@
         "https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures-3.jpg",
         "https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures-5.jpg",
         "https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures-9.jpg",
-	"https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures-10.jpg",
-	"https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures-12.jpg",
-	"https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures-16.jpg",
-	"https://1.bp.blogspot.com/-jtBr0Xyl2KA/UDL4uGuq_II/AAAAAAAAJ7I/uY0fQGQOzbY/s1600/40.JPG",
-	"https://1.bp.blogspot.com/-FEs2UH2fFx8/UDL4tMkvMJI/AAAAAAAAJ7A/r4lDcgeW-MQ/s1600/42.JPG"
+		"https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures-10.jpg",
+		"https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures-12.jpg",
+		"https://tailandfur.com/wp-content/uploads/2014/03/cute-duck-pictures-16.jpg",
+		"https://1.bp.blogspot.com/-jtBr0Xyl2KA/UDL4uGuq_II/AAAAAAAAJ7I/uY0fQGQOzbY/s1600/40.JPG",
+		"https://1.bp.blogspot.com/-FEs2UH2fFx8/UDL4tMkvMJI/AAAAAAAAJ7A/r4lDcgeW-MQ/s1600/42.JPG"
     ];
-    var duck = Math.floor(Math.random()*random1.length);
-    return document.getElementById("result").innerHTML = '<img src="'+random1[duck]+'"/>';
 
+    var random2 = new Array();
+    random2 = [
+    "Ducks Have Accents!! City ducks have a different accent than country ducks... typically louder!", 
+    "Ducklings Communicate: before hatching, ducklings learn to communicate with each other in the eggs and try to hatch at the same time.", 
+    "Ducks have exceptional visuals and can see finer detail at farther distances than humans.", 
+    "According to research, ducks may show a preference for colors in the green or blue spectrum.",
+	"All ducks can dive, but some species are better at diving than others. The best is the long-tailed duck, also known as an oldsquaw, which can dive 240 feet.",
+	"Ducks can live up to 20 years"
+	];
+
+    var duck = Math.floor(Math.random()*random1.length);
+    var numGen = Math.floor(Math.random() * random2.length);
+	document.getElementById("result2").innerHTML = '<p>'+random2[numGen]+'</p>';
+    document.getElementById("result").innerHTML = '<img src="'+random1[duck]+'"/>';
 }
 	</script>
 	<body>
@@ -35,7 +47,7 @@
 I figured it would be great practice to work with HTML and Javscript at the same time :)). Enjoy.</p>	
 		<button onClick = "RandomDuck()">Generate</button>
 		<br> <br>
-		<span id="result" align="center"> </span>
+		<span id = "result2" align = "center"></span><span id="result" align="center"></span>
 	</main>
 	</body>
 </html>
